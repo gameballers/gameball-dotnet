@@ -9,7 +9,7 @@ namespace Gameball.Constants
     internal static class GameballConstants
     {
         //The base URL for Gameball v2.0 API
-        public const string BaseURL = "https://gb-api.azurewebsites.net/api/v2.0/";
+        public const string BaseURL = "https://api.gameball.co/v2.0/";
 
         //Available endpoints
         public const string Player = "Integrations/Player";
