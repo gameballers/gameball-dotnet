@@ -11,7 +11,7 @@
 
 
             [JsonProperty("pointsBalance")]
-            public int PointsBalance { get; set; }
+            public double? PointsBalance { get; set; }
 
             [JsonProperty("pointsValue")]
             public double? PointsValue { get; set; }

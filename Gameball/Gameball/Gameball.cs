@@ -47,9 +47,9 @@ namespace Gameball
         /// Your preferred Gameball Language.
         /// </summary>
         /// <remarks>
-        /// Defaults to <see cref="GameballConstants.English">English.</see>
+        /// Defaults to <see cref="GameballConstants.GameballLang.English">English.</see>
         /// </remarks>
-        string Lang { get; set; }
+        GameballLang Lang { get; set; }
 
         /// <summary>
         /// Gameball client responsible for handling http requests.
@@ -92,10 +92,9 @@ namespace Gameball
             this.ApiBase = GameballConstants.BaseURL;
             this.ApiKey = apiKey;
             this.TransactionKey = transactionKey;
-            this.Lang = GameballConstants.English;
+            this.Lang = GameballLang.English;
             Client.DefaultRequestHeaders.Clear();
             Client.DefaultRequestHeaders.Add("APIKey", ApiKey);
-            Client.DefaultRequestHeaders.Add("lang", Lang);
         }
 
 
@@ -436,8 +435,13 @@ namespace Gameball
         /// This service For Get the Player's Info. 
         /// </summary>
         /// <exception cref="GameballException">Thrown if the request fails..</exception>
-        public PlayerInfo GetPlayerInfo(string playerUniqueId)
+        public PlayerInfo GetPlayerInfo(string playerUniqueId, GameballLang Language = 0 )
         {
+            if (Language !=0)
+            {
+                Client.DefaultRequestHeaders.Add("lang", GameballUtils.ToValidLang(Language));
+            }
+
             PlayerInfoRequest Info = new PlayerInfoRequest()
             {
                 PlayerUniqueId = playerUniqueId,
@@ -445,6 +449,10 @@ namespace Gameball
             };
             Info.Validate();
             var response = this.Client.PostAsync(ApiBase + GameballConstants.PlayerInfo, new StringContent(Info.Serialize(), Encoding.UTF8, "application/json")).Result;
+
+            //Removes Overhead of lang header if not necessary in next calls.
+            Client.DefaultRequestHeaders.Remove("lang");
+
             if (!response.IsSuccessStatusCode)
                 throw (BuildGameballException(response));
             else
@@ -456,8 +464,13 @@ namespace Gameball
         /// This Async service For Get the Player's Info. 
         /// </summary>
         /// <exception cref="GameballException">Thrown if the request fails..</exception>
-        public async Task<PlayerInfo> GetPlayerInfoAsync(string playerUniqueId)
+        public async Task<PlayerInfo> GetPlayerInfoAsync(string playerUniqueId, GameballLang Language = 0)
         {
+
+            if (Language != 0)
+            {
+                Client.DefaultRequestHeaders.Add("lang", GameballUtils.ToValidLang(Language));
+            }
             PlayerInfoRequest Info = new PlayerInfoRequest()
             {
                 PlayerUniqueId = playerUniqueId,
@@ -465,6 +478,10 @@ namespace Gameball
             };
             Info.Validate();
             var response = await this.Client.PostAsync(ApiBase + GameballConstants.PlayerInfo, new StringContent(Info.Serialize(), Encoding.UTF8, "application/json"));
+
+            //Removes Overhead of lang header if not necessary in next calls.
+            Client.DefaultRequestHeaders.Remove("lang");
+
             if (!response.IsSuccessStatusCode)
                 throw (BuildGameballException(response));
             else

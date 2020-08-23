@@ -1,4 +1,6 @@
-﻿namespace Gameball.Constants
+﻿using System.Collections.Generic;
+
+namespace Gameball.Constants
 {
 
     /// <summary>
@@ -7,7 +9,7 @@
     internal static class GameballConstants
     {
         //The base URL for Gameball v2.0 API
-        public const string BaseURL = "https://api.gameball.co/v2.0/";
+        public const string BaseURL = "https://gb-api.azurewebsites.net/api/v2.0/";
 
         //Available endpoints
         public const string Player = "Integrations/Player";
@@ -24,11 +26,6 @@
         public const string RedeemDiscount = "Integrations/Coupon/Redeem";
         public const string ValidateDiscount = "Integrations/Coupon/Validate";
         public const string PlayerInfo = "Integrations/Player/Info";
-
-        //Supported languages
-        public const string English = "en";
-        public const string Arabic = "ar";
-        public const string French = "fr";
     }
 }
 
