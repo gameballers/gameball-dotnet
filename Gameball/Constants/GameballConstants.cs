@@ -1,4 +1,6 @@
-﻿namespace Gameball.Constants
+﻿using System.Collections.Generic;
+
+namespace Gameball.Constants
 {
 
     /// <summary>
@@ -24,11 +26,6 @@
         public const string RedeemDiscount = "Integrations/Coupon/Redeem";
         public const string ValidateDiscount = "Integrations/Coupon/Validate";
         public const string PlayerInfo = "Integrations/Player/Info";
-
-        //Supported languages
-        public const string English = "en";
-        public const string Arabic = "ar";
-        public const string French = "fr";
     }
 }
 

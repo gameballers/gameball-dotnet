@@ -8,6 +8,7 @@
     using System.Linq;
     using global::Gameball.Exceptions;
     using System.Net;
+    using global::Gameball.Constants;
 
     /// <summary>
     /// Gameball Utilities class, supports algorithms used in issuing Gameball requests and performing necessary checks and validations.
@@ -94,9 +95,38 @@
                 return (((double)amount).ToString());
         }
 
+        /// <summary>
+        /// converts GameballLang to corresponding code.
+        /// </summary>
+        /// <param name="Language"></param>
+        /// <returns></returns>
+        public static string ToValidLang(GameballLang Language)
+        {
+            switch (Language)
+            {
+                case GameballLang.English:
+                    return "en";
+                case GameballLang.Arabic:
+                    return "ar";
+                case GameballLang.French:
+                    return "fr";
+                case GameballLang.German:
+                    return "de";
+                case GameballLang.Italian:
+                    return "it";
+                case GameballLang.Polish:
+                    return "pl";
+                case GameballLang.Portuguese:
+                    return "pt";
+                case GameballLang.Spanish:
+                    return "es";
 
+                default:
+                    return "en";
+            }
+        }
 
-
+             
 
     }
 }

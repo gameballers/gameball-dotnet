@@ -35,7 +35,7 @@
     {
 
         [JsonProperty("scoreBalance")]
-        public int scoreBalance { get; set; }
+        public double? scoreBalance { get; set; }
 
         [JsonProperty("scoreName")]
         public string scoreName { get; set; }
@@ -45,10 +45,10 @@
     {
 
         [JsonProperty("scoreEnteryReward")]
-        public int scoreEnteryReward { get; set; }
+        public double? scoreEnteryReward { get; set; }
 
         [JsonProperty("pointsEnteryReward")]
-        public int pointsEnteryReward { get; set; }
+        public double? pointsEnteryReward { get; set; }
 
         [JsonProperty("levelDiscount")]
         public object levelDiscount { get; set; }
@@ -67,7 +67,7 @@
         public object description { get; set; }
 
         [JsonProperty("levelStartScore")]
-        public int levelStartScore { get; set; }
+        public double? levelStartScore { get; set; }
 
         [JsonProperty("levelOrder")]
         public int levelOrder { get; set; }
@@ -83,10 +83,10 @@
     {
 
         [JsonProperty("pointsBalance")]
-        public int pointsBalance { get; set; }
+        public double? pointsBalance { get; set; }
 
         [JsonProperty("pointsValue")]
-        public int pointsValue { get; set; }
+        public double? pointsValue { get; set; }
 
         [JsonProperty("currency")]
         public string currency { get; set; }
