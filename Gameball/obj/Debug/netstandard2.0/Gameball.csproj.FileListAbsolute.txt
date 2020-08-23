@@ -1,0 +1,9 @@
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\bin\Debug\netstandard2.0\Gameball.deps.json
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\bin\Debug\netstandard2.0\Gameball.dll
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\bin\Debug\netstandard2.0\Gameball.pdb
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\obj\Debug\netstandard2.0\Gameball.csprojAssemblyReference.cache
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\obj\Debug\netstandard2.0\Gameball.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\obj\Debug\netstandard2.0\Gameball.AssemblyInfo.cs
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\obj\Debug\netstandard2.0\Gameball.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\obj\Debug\netstandard2.0\Gameball.dll
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\obj\Debug\netstandard2.0\Gameball.pdb
