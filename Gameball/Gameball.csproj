@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net45;net461</TargetFrameworks>
+    <Version>1.0.0</Version>
+    <PackageId>gameball</PackageId>
+    <Authors>Gameball</Authors>
+    <Company>Gameball.co</Company>
+    <Product>.NET SDK</Product>
+    <Description>The Gameball .NET SDK provides convenient access to the Gameball API from applications written in the .NET language.</Description>
+    <PackageTags>Gameball,.NET,SDK,Library</PackageTags>
+    <PackageIcon>download.png</PackageIcon>
+    <RepositoryUrl>https://github.com/gameballers/gameball-dotnet</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+  </ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+		<PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.1.0" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="4.5.0" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+		<PackageReference Include="Microsoft.Bcl.AsyncInterfaces" Version="1.1.0" />
+		<PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
+		<Reference Include="System.Configuration" />
+		<Reference Include="System.Net.Http" />
+	</ItemGroup>
+
+	<ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+		<PackageReference Include="System.Runtime.InteropServices.RuntimeInformation" Version="4.3.0" />
+		<Reference Include="System.Configuration" />
+		<Reference Include="System.Net.Http" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="..\..\..\download.png" Link="Icon\download.png">
+	    <Pack>True</Pack>
+	    <PackagePath></PackagePath>
+	  </None>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Icon\" />
+	</ItemGroup>
+
+</Project>
