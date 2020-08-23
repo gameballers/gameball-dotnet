@@ -1,0 +1,11 @@
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\bin\Debug\net45\Gameball.dll
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\bin\Debug\net45\Gameball.pdb
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\bin\Debug\net45\Newtonsoft.Json.dll
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\bin\Debug\net45\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\obj\Debug\net45\Gameball.csprojAssemblyReference.cache
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\obj\Debug\net45\Gameball.AssemblyInfoInputs.cache
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\obj\Debug\net45\Gameball.AssemblyInfo.cs
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\obj\Debug\net45\Gameball.csproj.CoreCompileInputs.cache
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\obj\Debug\net45\Gameball.csproj.CopyComplete
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\obj\Debug\net45\Gameball.dll
+C:\Users\hp\Documents\GitHub\gameball-dotnet\Gameball\obj\Debug\net45\Gameball.pdb

@@ -2,14 +2,14 @@
 
   <PropertyGroup>
     <TargetFrameworks>netstandard2.0;net45;net461</TargetFrameworks>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <PackageId>gameball</PackageId>
     <Authors>Gameball</Authors>
     <Company>Gameball.co</Company>
     <Product>.NET SDK</Product>
     <Description>The Gameball .NET SDK provides convenient access to the Gameball API from applications written in the .NET language.</Description>
     <PackageTags>Gameball,.NET,SDK,Library</PackageTags>
-    <PackageIcon>download.png</PackageIcon>
+    <PackageIcon>icon.png</PackageIcon>
     <RepositoryUrl>https://github.com/gameballers/gameball-dotnet</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
   </PropertyGroup>
@@ -37,7 +37,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Include="..\..\..\download.png" Link="Icon\download.png">
+	  <None Include="Icon\icon.png" Link="Icon\download.png">
 	    <Pack>True</Pack>
 	    <PackagePath></PackagePath>
 	  </None>

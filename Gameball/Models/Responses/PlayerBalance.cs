@@ -19,8 +19,8 @@
             [JsonProperty("currency")]
             public string Currency { get; set; }
 
-            [JsonProperty("walletPointsName")]
-            public string WalletPointsName { get; set; }
+            [JsonProperty("pointsName")]
+            public string PointsName { get; set; }
 
             [JsonProperty("isDeleted")]
             public bool IsDeleted { get; set; }

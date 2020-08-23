@@ -6,97 +6,106 @@
     using System.Text;
     using global::Gameball.Utils;
     using Newtonsoft.Json;
+
     public class PlayerInfo : GameballModel
     {
 
         [JsonProperty("displayName")]
-        public string DisplayName { get; set; }
+        public string displayName { get; set; }
 
         [JsonProperty("referralCode")]
-        public string ReferralCode { get; set; }
+        public string referralCode { get; set; }
 
         [JsonProperty("referralLink")]
-        public string ReferralLink { get; set; }
+        public string referralLink { get; set; }
 
-        [JsonProperty("scoreBalance")]
-        public int ScoreBalance { get; set; }
-
-        [JsonProperty("scoreName")]
-        public string ScoreName { get; set; }
+        [JsonProperty("score")]
+        public Score score { get; set; }
 
         [JsonProperty("level")]
-        public Level Level { get; set; }
+        public Level level { get; set; }
 
-        [JsonProperty("balance")]
-        public Balance Balance { get; set; }
+        [JsonProperty("points")]
+        public Points points { get; set; }
 
-        [JsonProperty("attributes")]
-        public IList<Attribute> Attributes { get; set; }
+        [JsonProperty("playerAttributes")]
+        public IList<PlayerAttribute> playerAttributes { get; set; }
     }
-    public class Benefits:GameballModel
+    public class Score
+    {
+
+        [JsonProperty("scoreBalance")]
+        public int scoreBalance { get; set; }
+
+        [JsonProperty("scoreName")]
+        public string scoreName { get; set; }
+    }
+
+    public class Benefits
     {
 
         [JsonProperty("scoreEnteryReward")]
-        public int ScoreEnteryReward { get; set; }
+        public int scoreEnteryReward { get; set; }
 
         [JsonProperty("pointsEnteryReward")]
-        public int PointsEnteryReward { get; set; }
+        public int pointsEnteryReward { get; set; }
 
         [JsonProperty("levelDiscount")]
-        public double? LevelDiscount { get; set; }
+        public object levelDiscount { get; set; }
 
         [JsonProperty("discountCapping")]
-        public double? DiscountCapping { get; set; }
+        public object discountCapping { get; set; }
     }
 
-    public class Level:GameballModel
+    public class Level
     {
 
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string name { get; set; }
 
         [JsonProperty("description")]
-        public object Description { get; set; }
+        public object description { get; set; }
 
         [JsonProperty("levelStartScore")]
-        public int LevelStartScore { get; set; }
+        public int levelStartScore { get; set; }
 
         [JsonProperty("levelOrder")]
-        public int LevelOrder { get; set; }
+        public int levelOrder { get; set; }
 
         [JsonProperty("iconPath")]
-        public string IconPath { get; set; }
+        public string iconPath { get; set; }
 
         [JsonProperty("benefits")]
-        public Benefits Benefits { get; set; }
+        public Benefits benefits { get; set; }
     }
 
-    public class Balance:GameballModel
+    public class Points
     {
 
         [JsonProperty("pointsBalance")]
-        public int PointsBalance { get; set; }
+        public int pointsBalance { get; set; }
 
         [JsonProperty("pointsValue")]
-        public double? PointsValue { get; set; }
+        public int pointsValue { get; set; }
 
         [JsonProperty("currency")]
-        public string Currency { get; set; }
+        public string currency { get; set; }
 
         [JsonProperty("pointsName")]
-        public string PointsName { get; set; }
+        public string pointsName { get; set; }
     }
 
-    public class Attribute:GameballModel
+    public class PlayerAttribute
     {
 
         [JsonProperty("name")]
-        public string Name { get; set; }
+        public string name { get; set; }
 
         [JsonProperty("value")]
-        public string Value { get; set; }
+        public string value { get; set; }
 
         [JsonProperty("type")]
-        public string Type { get; set; }
+        public string type { get; set; }
     }
+
 }
