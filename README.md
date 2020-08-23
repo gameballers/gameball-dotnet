@@ -1,5 +1,5 @@
 # Gameball .NET SDK
-The Gameball .NET SDK provides convenient access to the Gameball API from applications written in the .NET language.
+The Gameball .NET SDK provides convenient access to the Gameball API from applications written in the C# language.
 ​
 ## Documentation
 ​
